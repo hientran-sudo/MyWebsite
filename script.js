@@ -10,7 +10,6 @@ const myProfile = new Profile(
 );
 const main = document.querySelector(".maincontent");
 const content = `
-<article class="profile" id="my">
      <figure class="profile__image">
        <img src=${myProfile.image} alt="" width = "500" height = "600"/>
      </figure>
@@ -22,6 +21,11 @@ const content = `
        <li class="profile__school">Class year:<span> ${myProfile.school.cy}</span></li>
        
      </ul>
-   </article>
+
 `;
-main.innerHTML=content;
+const newArticle  = document.createElement("article")
+newArticle.classList.add("profile")
+newArticle.setAttribute("id","my")
+newArticle.innerHTML=content;
+
+main.append(newArticle)
