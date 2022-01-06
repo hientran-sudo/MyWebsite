@@ -1,0 +1,10 @@
+document.querySelector(".maincontent")
+document.querySelectorAll("main li:first-child")
+document.querySelector("main li:first-child").classList.add("new-class")
+
+
+document.getElementById("my")
+document.getElementsByClassName("profile__name")
+
+document.querySelector("h1").style.color="pink"
+document.querySelector("h1").align="center"
