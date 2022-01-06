@@ -21,11 +21,26 @@ const content = `
        <li class="profile__school">Class year:<span> ${myProfile.school.cy}</span></li>
        
      </ul>
+`;
 
+const navContent =`
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
 `;
 const newArticle  = document.createElement("article")
 newArticle.classList.add("profile")
 newArticle.setAttribute("id","my")
-newArticle.innerHTML=content;
-
+newArticle.innerHTML=content
 main.append(newArticle)
+
+const mainNav = document.createElement("nav")
+mainNav.classList.add("main-navigation")
+const navList = document.createElement("ul")
+navList.innerHTML = navContent
+mainNav.append(navList)
+
+document.querySelector(".siteheader").append(mainNav)
+
+
