@@ -8,3 +8,5 @@ document.getElementsByClassName("profile__name")
 
 document.querySelector("h1").style.color="pink"
 document.querySelector("h1").align="center"
+
+element.className returns a string containing all classes appended to the element. element.classList returns a DOMTokenList with each class appended to the element.
