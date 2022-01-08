@@ -10,7 +10,6 @@ const myProfile = new Profile(
 );
 const main = document.querySelector(".maincontent");
 const content = `
-<article class="profile" id="my">
      <figure class="profile__image">
        <img src=${myProfile.image} alt="" width = "500" height = "600"/>
      </figure>
@@ -22,6 +21,32 @@ const content = `
        <li class="profile__school">Class year:<span> ${myProfile.school.cy}</span></li>
        
      </ul>
-   </article>
 `;
-main.innerHTML=content;
+
+const navContent =`
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
+`;
+const newArticle  = document.createElement("article")
+newArticle.classList.add("profile")
+newArticle.setAttribute("id","my")
+newArticle.innerHTML=content
+main.append(newArticle)
+
+const mainNav = document.createElement("nav")
+mainNav.classList.add("main-navigation")
+const navList = document.createElement("ul")
+navList.innerHTML = navContent
+mainNav.append(navList)
+
+document.querySelector(".siteheader").append(mainNav)
+
+var color = "purple";
+document.querySelector(".left").style.backgroundColor=color;
+document.querySelector(".left .color-value").innerHTML=color;
+
+color = "skyblue";
+document.querySelector(".right").style.backgroundColor=color;
+document.querySelector(".right .color-value").innerHTML=color;

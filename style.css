@@ -146,3 +146,42 @@ body {
     background: black;
     color: white;
   }
+  .main-navigation ul {
+    margin: 0;
+    padding: 3rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .main-navigation ul a {
+    padding: .5rem 1rem;
+    color: inherit;
+  }
+  
+  
+  figure {
+    margin: 0;
+  }
+  code {
+    font-size: 120%;
+  }
+
+  .boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 60rem;
+  }
+
+  .title {
+    grid-column: span 2;
+    text-align: center;
+  }
+  .boxes div {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4rem;
+    font-size: 3rem;
+    color: white;
+    background-color: green;
+  }
