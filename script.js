@@ -44,11 +44,11 @@ mainNav.append(navList)
 document.querySelector(".siteheader").append(mainNav)
 
 function headingColor (){
-  color = "blue";
-  document.querySelector(".site-title").style.color = color;
+  let titleColor = "blue";
+  document.querySelector(".site-title").style.color = titleColor;
 }
 
-var color = "purple";
+let color = "purple";
 document.querySelector(".left").style.backgroundColor=color;
 document.querySelector(".left .color-value").innerHTML=color;
 
