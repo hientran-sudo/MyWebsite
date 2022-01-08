@@ -12,6 +12,19 @@ body {
   h6 {
     font-family: "Oswald", sans-serif;
   }
+
+.main-navigation ul {
+    margin: 0;
+    padding: 3rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .main-navigation ul a {
+    padding: .5rem 1rem;
+    color: inherit;
+  }
+  
   
   figure {
     margin: 0;
@@ -185,3 +198,4 @@ body {
     color: white;
     background-color: green;
   }
+

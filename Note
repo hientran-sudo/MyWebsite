@@ -1,0 +1,18 @@
+document.querySelector(".maincontent")
+document.querySelectorAll("main li:first-child")
+document.querySelector("main li:first-child").classList.add("new-class")
+
+
+document.getElementById("my")
+document.getElementsByClassName("profile__name")
+
+document.querySelector("h1").style.color="pink"
+document.querySelector("h1").align="center"
+
+element.className returns a string containing all classes appended to the element. element.classList returns a DOMTokenList with each class appended to the element.
+
+var container = 5
+contain = "pink" // mutable
+var x = 3, y=8, z ="red" // define multiple variables
+
+

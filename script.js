@@ -43,6 +43,7 @@ mainNav.append(navList)
 
 document.querySelector(".siteheader").append(mainNav)
 
+
 var color = "purple";
 document.querySelector(".left").style.backgroundColor=color;
 document.querySelector(".left .color-value").innerHTML=color;
@@ -50,3 +51,6 @@ document.querySelector(".left .color-value").innerHTML=color;
 color = "skyblue";
 document.querySelector(".right").style.backgroundColor=color;
 document.querySelector(".right .color-value").innerHTML=color;
+
+
+
