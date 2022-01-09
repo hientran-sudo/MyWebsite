@@ -68,5 +68,18 @@ else{
   console.error("no match");
 }
 
+//Math Operations
+let a = 3;
+let b =2;
+let c =2;
+ console.log(`let a ${a} (${typeof a})`);
+ console.log(`let b ${b} (${typeof b})`);
+ console.log(`let c ${c} (${typeof c})`);
+
+let d = a + b + c;
+console.log("sum ", d);
+
+
+
 
 
