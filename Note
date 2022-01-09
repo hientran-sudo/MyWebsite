@@ -49,5 +49,17 @@ else{
   console.error("no match");
 }
 
+let a = 3;
+let b ="3";
+ console.log(`let a ${a} (${typeof a})`);
+ console.log(`let b ${b} (${typeof b})`);
+
+if (a==b){
+  console.log("matched");
+}
+else{
+  console.error("no match");
+}
+
 
 
