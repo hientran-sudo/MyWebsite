@@ -37,5 +37,17 @@ console.log("object ", objectDemo);
 const arrayDemo = [1,2,3];
 console.log("array ", arrayDemo);
 
+let a = 3;
+let b =2;
+ console.log(`let a ${a} (${typeof a})`);
+ console.log(`let b ${b} (${typeof b})`);
+
+if (a==b){
+  console.log("matched");
+}
+else{
+  console.error("no match");
+}
+
 
 
