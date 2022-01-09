@@ -82,6 +82,21 @@ console.log("sum ", d);
 let d = a ** b;
 console.log("a^b ", d);
 
+let item = "flashlight";
+const collection = ["1", 2, "three",true];
+console.log(collection);
+
+console.log(collection.length);
+
+let item = "flashlight";
+const collection = ["1", 2, "three",true];
+collection[2]="camera";
+console.log(collection);
+
+collection[collection.length]=3;
+
+
+
 
 
 
