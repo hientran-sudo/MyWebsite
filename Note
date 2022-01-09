@@ -15,5 +15,27 @@ var container = 5
 contain = "pink" // mutable
 var x = 3, y=8, z ="red" // define multiple variables
 
+//Datatype
+let stringDemo = "hello";
+console.log("string ", stringDemo);
+
+let number = 9;
+console.log("number ", number);
+
+let floatDemo = 8.8;
+console.log("float ", floatDemo);
+
+let booleanDemo = true;
+console.log("boolean ",booleanDemo);
+
+const objectDemo = {
+  name :"Rambo",
+  age: 24
+};
+console.log("object ", objectDemo);
+
+const arrayDemo = [1,2,3];
+console.log("array ", arrayDemo);
+
 
 
