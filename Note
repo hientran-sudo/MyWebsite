@@ -109,6 +109,17 @@ array.shift();
 array.pop();
 console.log(array.join(" "));
 
+let array = ["Hello","world","!"];
+
+array.forEach(function (item){
+  item = `<li>${item}</li>`
+  console.log(item);
+
+});
+console.log(array);
+
+
+
 
 
 
