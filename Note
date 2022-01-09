@@ -118,6 +118,15 @@ array.forEach(function (item){
 });
 console.log(array);
 
+let backpackContents = ["Hello","world","!"];
+let longItems = backpackContents.find(function (item) {
+    if (item.length >= 5) {
+      return item;
+    }
+ });
+ console.log("longItems:", longItems);
+ 
+
 
 
 
