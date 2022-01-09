@@ -95,6 +95,21 @@ console.log(collection);
 
 collection[collection.length]=3;
 
+let array = ["Hello","world","!"];
+console.log(array.join());// print out Hello,world,!
+
+let array = ["Hello","world","!"];
+console.log(array.join(" "));// prints Hello world !
+
+
+let array = ["Hello","world","!"];
+
+array.push("Fun",3);
+array.shift();
+array.pop();
+console.log(array.join(" "));
+
+
 
 
 
