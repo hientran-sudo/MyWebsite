@@ -61,5 +61,12 @@ else{
   console.error("no match");
 }
 
+if (a===b){
+  console.log("matched");
+}
+else{
+  console.error("no match");
+}
+
 
 
