@@ -133,7 +133,11 @@ const founditem = array.find(item => item === "b")
 console.log(founditem);
 
 
-
+let array = ["b","c","a", "j"];
+console.log(array);//move last item to the beginning of an array
+let remove = "j";
+array.splice(array.indexOf(remove),1)
+console.log(`array with "${remove}" removed:`,array);
 
 
 
