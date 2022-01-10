@@ -126,6 +126,12 @@ let longItems = backpackContents.find(function (item) {
  });
  console.log("longItems:", longItems);
  
+let array = ["b","c","a", "j"];
+array.unshift(array.pop());
+console.log(array);//move last item to the beginning of an array
+const founditem = array.find(item => item === "b")
+console.log(founditem);
+
 
 
 
