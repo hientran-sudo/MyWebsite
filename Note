@@ -139,7 +139,23 @@ let remove = "j";
 array.splice(array.indexOf(remove),1)
 console.log(`array with "${remove}" removed:`,array);
 
+function doMath(a,b){
+  let c = a+b;
+  return c;
+}
+const doMoreMath = function (a,b){
+  let c = a*b;
+  return c;
+}
+console.log(doMoreMath(4,5));
+console.log(doMath(4,5));
 
+(function (){
+let a =5;
+let b=5;
+let c = doMath(a,b);
+console.log(c);
+})();
 
 
 
