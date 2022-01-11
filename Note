@@ -177,6 +177,20 @@ const addExperience = function(current){
 const testmain = document.querySelector("testmain");
 testmain.append(addExperience(Experience));
 
+//arrow functions
+const addEx= (current)=>{
+  const newArticle = document.createElement("article");
+  newArticle.innerHTML=`
+  <h1>${current.desc}</h1>
+  <ul>
+  <li>Javascript: ${current.javascript}</li>
+  <li>Javas: ${current.java}</li>
+  </ul>
+  `;
+  return newArticle;
+}
+const testmain = document.querySelector("testmain");
+testmain.append(addEx(Experience));
 
 
 
