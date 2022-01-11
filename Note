@@ -204,6 +204,7 @@ const Experience ={
 };
 console.log(Experience.adjust(5));
 
+//Passing parameters
 const tipCal = () =>{
   let sum = 29;
   let percentage = 18;
@@ -219,6 +220,7 @@ const tipCal = () =>{
 
 tipCal();
 
+//
 const tipCal = (sum,percentage) =>{
   
   let tip = sum * (percentage/100);
@@ -232,3 +234,18 @@ const tipCal = (sum,percentage) =>{
 };
 
 tipCal(29,18);
+
+
+const tipCal = (sum,percentage,currency) =>{
+  
+  let tip = sum * (percentage/100);
+  let total = sum +tip;
+  console.log(`
+  Sum before tip: ${currency}${sum}
+  Tip percentage: ${currency}${percentage}%
+  Tip:            ${currency}${tip}
+  Total:          ${currency}${total}
+  `);
+};
+
+tipCal(29,18,"$");
