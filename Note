@@ -192,5 +192,15 @@ const addEx= (current)=>{
 const testmain = document.querySelector("testmain");
 testmain.append(addEx(Experience));
 
-
+const Experience ={
+  desc: "list of experiences",
+  javascript: 2,
+  java :3,
+  adjust: function(java){
+    console.log("this.java in the method:", this.java);
+    this.java=java;
+    console.log("this.java after update: ",this.java);
+  },
+};
+console.log(Experience.adjust(5));
 
