@@ -293,6 +293,7 @@ const tipCal = (sum,percentage,locale,currency) =>{
 
 tipCal(29,18,"de-DE","EUR");
 
+//Callback
 const formatter = (locale ="en-US",currency ="USD",value)=>{
   let formattedValue = new Intl.NumberFormat(locale,{
     style:"currency",
