@@ -339,3 +339,20 @@ const tipCal = (sum, percentage, locale, currency,callback)=>{
 };
 
 tipCal(28, 18,"de-FE","EUR",printHTML);
+
+//Switch
+const Status = () => {
+  let a = myProfile.siteAge();
+  let desc;
+  switch (true){
+    case a <30:
+      desc = "new";
+      break;
+    case age>=30 && age<365:
+      desc = "old";
+      break;
+    default:
+      console.log(`No description for ${a}`)
+  }
+  console.log(`${desc}`);
+}
