@@ -15,5 +15,327 @@ var container = 5
 contain = "pink" // mutable
 var x = 3, y=8, z ="red" // define multiple variables
 
+//Datatype
+let stringDemo = "hello";
+console.log("string ", stringDemo);
+
+let number = 9;
+console.log("number ", number);
+
+let floatDemo = 8.8;
+console.log("float ", floatDemo);
+
+let booleanDemo = true;
+console.log("boolean ",booleanDemo);
+
+const objectDemo = {
+  name :"Rambo",
+  age: 24
+};
+console.log("object ", objectDemo);
+
+const arrayDemo = [1,2,3];
+console.log("array ", arrayDemo);
+
+let a = 3;
+let b =2;
+ console.log(`let a ${a} (${typeof a})`);
+ console.log(`let b ${b} (${typeof b})`);
+
+if (a==b){
+  console.log("matched");
+}
+else{
+  console.error("no match");
+}
+
+let a = 3;
+let b ="3";
+ console.log(`let a ${a} (${typeof a})`);
+ console.log(`let b ${b} (${typeof b})`);
+
+if (a==b){
+  console.log("matched");
+}
+else{
+  console.error("no match");
+}
+
+if (a===b){
+  console.log("matched");
+}
+else{
+  console.error("no match");
+}
+
+//Math Operations
+let a = 3;
+let b =2;
+let c =2;
+ console.log(`let a ${a} (${typeof a})`);
+ console.log(`let b ${b} (${typeof b})`);
+ console.log(`let c ${c} (${typeof c})`);
+
+let d = a + b + c;
+console.log("sum ", d);
+
+let d = a ** b;
+console.log("a^b ", d);
+
+let item = "flashlight";
+const collection = ["1", 2, "three",true];
+console.log(collection);
+
+console.log(collection.length);
+
+let item = "flashlight";
+const collection = ["1", 2, "three",true];
+collection[2]="camera";
+console.log(collection);
+
+collection[collection.length]=3;
+
+let array = ["Hello","world","!"];
+console.log(array.join());// print out Hello,world,!
+
+let array = ["Hello","world","!"];
+console.log(array.join(" "));// prints Hello world !
 
 
+let array = ["Hello","world","!"];
+
+array.push("Fun",3);
+array.shift();
+array.pop();
+console.log(array.join(" "));
+
+let array = ["Hello","world","!"];
+
+array.forEach(function (item){
+  item = `<li>${item}</li>`
+  console.log(item);
+
+});
+console.log(array);
+
+let backpackContents = ["Hello","world","!"];
+let longItems = backpackContents.find(function (item) {
+    if (item.length >= 5) {
+      return item;
+    }
+ });
+ console.log("longItems:", longItems);
+ 
+let array = ["b","c","a", "j"];
+array.unshift(array.pop());
+console.log(array);//move last item to the beginning of an array
+const founditem = array.find(item => item === "b")
+console.log(founditem);
+
+
+let array = ["b","c","a", "j"];
+console.log(array);//move last item to the beginning of an array
+let remove = "j";
+array.splice(array.indexOf(remove),1)
+console.log(`array with "${remove}" removed:`,array);
+
+function doMath(a,b){
+  let c = a+b;
+  return c;
+}
+const doMoreMath = function (a,b){
+  let c = a*b;
+  return c;
+}
+console.log(doMoreMath(4,5));
+console.log(doMath(4,5));
+
+(function (){
+let a =5;
+let b=5;
+let c = doMath(a,b);
+console.log(c);
+})();
+
+const Experience ={
+  description: "list of experiences",
+  javascript: 2,
+  java :3
+}
+
+const addExperience = function(current){
+  const newArticle =document.createElement("article");
+  newArticle.innerHTML=`
+  <h1>${current.description}</h1>
+  <ul>
+  <li>Javascript: ${current.javascript}</li>
+  <li>Java: ${current.java}</li>
+  </ul>
+  `;
+  return newArticle;
+};
+const testmain = document.querySelector("testmain");
+testmain.append(addExperience(Experience));
+
+//arrow functions
+const addEx= (current)=>{
+  const newArticle = document.createElement("article");
+  newArticle.innerHTML=`
+  <h1>${current.desc}</h1>
+  <ul>
+  <li>Javascript: ${current.javascript}</li>
+  <li>Javas: ${current.java}</li>
+  </ul>
+  `;
+  return newArticle;
+}
+const testmain = document.querySelector("testmain");
+testmain.append(addEx(Experience));
+
+const Experience ={
+  desc: "list of experiences",
+  javascript: 2,
+  java :3,
+  adjust: function(java){
+    console.log("this.java in the method:", this.java);
+    this.java=java;
+    console.log("this.java after update: ",this.java);
+  },
+};
+console.log(Experience.adjust(5));
+
+//Passing parameters
+const tipCal = () =>{
+  let sum = 29;
+  let percentage = 18;
+  let tip = sum * (percentage/100);
+  let total = sum +tip;
+  console.log(`
+  Sum before tip: ${sum}
+  Tip percentage: ${percentage}%
+  Tip:            ${tip}
+  Total:          ${total}
+  `);
+};
+
+tipCal();
+
+//
+const tipCal = (sum,percentage) =>{
+  
+  let tip = sum * (percentage/100);
+  let total = sum +tip;
+  console.log(`
+  Sum before tip: ${sum}
+  Tip percentage: ${percentage}%
+  Tip:            ${tip}
+  Total:          ${total}
+  `);
+};
+
+tipCal(29,18);
+
+
+const tipCal = (sum,percentage,currency) =>{
+  
+  let tip = sum * (percentage/100);
+  let total = sum +tip;
+  console.log(`
+  Sum before tip: ${currency}${sum}
+  Tip percentage: ${currency}${percentage}%
+  Tip:            ${currency}${tip}
+  Total:          ${currency}${total}
+  `);
+};
+
+tipCal(29,18,"$");
+
+const formatter = (value) =>{
+  let formattedValue = new Intl.NumberFormat("de-DE",{
+    style:"currency",
+    currency:"EUR"
+  }).format(value);
+  return formattedValue;
+}
+const tipCal = (sum,percentage) =>{
+  
+  let tip = sum * (percentage/100);
+  let total = sum +tip;
+  console.log(`
+  Sum before tip: ${formatter(sum)}
+  Tip percentage: ${percentage}%
+  Tip:            ${formatter(tip)}
+  Total:          ${formatter(total)}
+  `);
+};
+
+tipCal(29,18);
+
+
+const formatter = (locale,currency,value) =>{
+  let formattedValue = new Intl.NumberFormat(locale,{
+    style:"currency",
+    currency:currency,
+  }).format(value);
+  return formattedValue;
+}
+const tipCal = (sum,percentage,locale,currency) =>{
+  
+  let tip = sum * (percentage/100);
+  let total = sum +tip;
+  console.log(`
+  Sum before tip: ${formatter(locale,currency,sum)}
+  Tip percentage: ${percentage}%
+  Tip:            ${formatter(locale,currency,tip)}
+  Total:          ${formatter(locale,currency,total)}
+  `);
+};
+
+tipCal(29,18,"de-DE","EUR");
+
+//Callback
+const formatter = (locale ="en-US",currency ="USD",value)=>{
+  let formattedValue = new Intl.NumberFormat(locale,{
+    style:"currency",
+    currency:currency,
+  }).format(value);
+  return formattedValue;
+};
+
+const printHTML = (finalTip)=>{
+  const tipTable = document.createElement("table");
+  tipTable.innerHTML=`
+  <tr>
+  <td>Sum before tip</td>
+  <td>${finalTip.sum}</td>
+  <tr>
+  <td>Tip percentage</td>
+  <td>${finalTip.percentage}</td>
+  </tr>
+  </tr>
+  <tr>
+  <td>Tip: </td>
+  <td>${finalTip.tip}</td>
+  </tr>
+  
+  <tr>
+  <td>Total</td>
+  <td>${finalTip.total}</td>
+  </tr>
+  `;
+document.querySelector("testmain").append(tipTable);
+};
+
+const tipCal = (sum, percentage, locale, currency,callback)=>{
+  let tip = sum*(percentage/100);
+  let total = sum +tip;
+  const finalTip = {
+    sum: formatter (locale, currency, sum),
+    percentage:percentage +"%",
+    tip: formatter(locale, currency, tip),
+    total: formatter(locale, currency, total),
+    };
+    callback(finalTip);
+};
+
+tipCal(28, 18,"de-FE","EUR",printHTML);
