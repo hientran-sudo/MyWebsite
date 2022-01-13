@@ -6,7 +6,8 @@ class Profile {
         classyear,
         major,
         graduate,
-        image
+        image,
+        dateCreated
     )
     {
         this.name=name;
@@ -18,10 +19,14 @@ class Profile {
         };
         this.graduate=graduate;
         this.image=image;
+        this.dateCreated=dateCreated;
+    }
+    siteAge(){
+        let now = new Date();
+        let created = new Date(this.dateCreated);
+        let eslasped = now - created;
+        let daysSinceCreated = Math.floor(eslasped/(1000*3600*24));
+        return daysSinceCreated;
     }
 }
 export default Profile;
-
-
-
-
