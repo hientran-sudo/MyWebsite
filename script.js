@@ -5,6 +5,7 @@ const myProfile = new Profile(
     "Fairfield University",
     2022,
     "Software Engineering",
+    false,
     "2021-08-08.jpg"
 
 );
@@ -19,7 +20,7 @@ const content = `
        <li class="profile__school">School:<span> ${myProfile.school.sn}</span></li>
        <li class="profile__school">Major:<span> ${myProfile.school.m}</span></li>
        <li class="profile__school">Class year:<span> ${myProfile.school.cy}</span></li>
-       
+       <li class="profile__school">Graduate:<span> ${myProfile.graduate}</span></li>      
      </ul>
 `;
 
@@ -58,6 +59,10 @@ document.querySelector(".right").style.backgroundColor=color;
 document.querySelector(".right .color-value").innerHTML=color;
 
 headingColor();
+console.log(myProfile.graduate? "graduated":"in progress");
+
+
+
 
 
 

@@ -5,6 +5,7 @@ class Profile {
         schoolname,
         classyear,
         major,
+        graduate,
         image
     )
     {
@@ -15,6 +16,7 @@ class Profile {
             cy:classyear,
             m:major
         };
+        this.graduate=graduate;
         this.image=image;
     }
 }
