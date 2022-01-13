@@ -356,3 +356,37 @@ const Status = () => {
   }
   console.log(`${desc}`);
 }
+
+//Looping
+const stuff = ["piggy","doggy","kitty"];
+const nestedObj = {
+  item1:{
+    name: "piggy",
+    type:"toy",
+    weight: 20,
+  },
+  item1:{
+    name: "doggy",
+    type:"toy",
+    weight: 10,
+  },
+  item1:{
+    name: "kitty",
+    type:"toy",
+    weight: 5,
+  }
+};
+const art = document.querySelector ("art");
+let List = document.createElement("ul");
+
+for (let i = 0; i<stuff.length;i++){
+  let list = document.createElement("li");
+  list.innerHTML=stuff[i];
+  List.append(list);
+}
+
+for (const singleObj in nestedObj){
+  let list = document.createElement("li");
+  list.innerHTML=`Name: ${nestedObj[singleObj].name}`;
+  List.append(list);
+}
