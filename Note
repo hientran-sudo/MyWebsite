@@ -418,3 +418,22 @@ console.log("stuff: ", stuff);
 console.log("items: ", Items);
 
 article.append(List);
+
+const stuff = ["piggy","doggy","kitty"];
+const article = document.querySelector("article");
+let List = document.createElement("ul");
+
+const Items = stuff.map((item)=>{
+  let list = document.createElement("li");
+  list.innerHTML=item;
+  return list;
+});
+
+Items.forEach((item)=>{
+  List.append(item);
+});
+
+console.log("stuff: ", stuff);
+console.log("items: ", Items);
+
+article.append(List);
