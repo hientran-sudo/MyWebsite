@@ -419,6 +419,7 @@ console.log("items: ", Items);
 
 article.append(List);
 
+//Map 
 const stuff = ["piggy","doggy","kitty"];
 const article = document.querySelector("article");
 let List = document.createElement("ul");
