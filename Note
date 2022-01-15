@@ -390,3 +390,17 @@ for (const singleObj in nestedObj){
   list.innerHTML=`Name: ${nestedObj[singleObj].name}`;
   List.append(list);
 }
+art.append(List);
+
+const stuff = ["piggy","kitty"];
+const article = document.querySelector("article");
+let stuffList = document.createElement("ul");
+
+stuff.forEach((item)=>{
+  let listItem = document.createElement("li");
+  listItem.innerHTML=item;
+  stuffList.append(listItem);
+
+});
+
+article.append(stuffList);
