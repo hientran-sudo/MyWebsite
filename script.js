@@ -105,3 +105,65 @@ container.addEventListener("mouseleave",()=>{
   container.classList.remove("blue");
 }, false
 );
+
+const gcontainer = document.querySelector(".grid");
+gcontainer.addEventListener("mouseenter",()=>{
+  gcontainer.style.outline = "6px blue";
+}, false
+);
+
+gcontainer.addEventListener("mouseleave",()=>{
+  gcontainer.style.outline = "";
+}, false
+);
+
+/**
+ * Function to generate random hex color
+ */
+const randColor = () => {
+  let hexColor = Math.floor(Math.random() * 16777215).toString(16);
+  return hexColor;
+};
+
+// Get all cells
+const gridCells = document.querySelectorAll(".cell");
+
+// For each cell, add eventlisteners aplenty
+gridCells.forEach((cell) => {
+  // Set outline when cell is hovered
+  cell.addEventListener("mouseenter", (e) => {
+    console.log(e);
+    cell.style.outline = "2px solid blue";
+  });
+
+  // Remove outline when cell is exited
+  cell.addEventListener("mouseleave", () => {
+    cell.style.outline = "";
+  });
+
+  // Set/remove random background color on click
+  cell.addEventListener("click", () => {
+    if (cell.style.backgroundColor) {
+      cell.style.backgroundColor = "";
+    } else {
+      cell.style.backgroundColor = `#${randColor()}`;
+    }
+  });
+});
+
+/**
+ * Set page background using the "d" key on the keyboard
+ */
+const body = document.body;
+body.addEventListener("keydown", (event) => {
+  // event.code holds the current key pressed:
+  console.log(event.code);
+
+  // Test for KeyD (the "d" key)
+  if (event.code === "KeyD") {
+    body.style.backgroundColor === ""
+      ? (body.style.backgroundColor = "hsl(201, 34%, 13%)")
+      : (body.style.backgroundColor = "");
+  }
+});
+
